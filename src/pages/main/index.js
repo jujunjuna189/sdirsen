@@ -91,7 +91,7 @@ const MainPage = () => {
         <Content>
             <Navbar />
             <div className="py-16 text-center bg-gradient-to-r from-red-200 via-red-50 to-red-200">
-                <span className="text-3xl font-bold">Sdirbinsen Pencarian Informasi</span>
+                <span className="text-3xl font-bold">Sdirsen Pencarian Informasi</span>
                 <div>
                     <span className="font-medium">Jelajahi informasi mengenai data personil, belajar di E-Learning dan mencari material</span>
                 </div>

@@ -7,7 +7,7 @@ const Navbar = () => {
         <div className="bg-white shadow-md">
             <div className="flex justify-between py-2 px-6">
                 <div>
-                    <span className="font-medium text-2xl">Sdirbinsen*</span>
+                    <span className="font-medium text-2xl">Sdirsen*</span>
                 </div>
                 <div className="flex">
                     <div onClick={() => logout()}>
