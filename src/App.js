@@ -1,11 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
 import { AuthContextProvider } from './context/auth/AuthContext';
 import { LoginContextProvider } from './context/auth/LoginContext';
-import { BatalyonDetailContextProvider } from './context/batalyon/BatalyonDetailContent';
+import { SatuanDetailContextProvider } from './context/satuan/SatuanDetailContent';
 import { MainContextProvider } from './context/main/MainContext';
 import { PersonilDetailContextProvider } from './context/personil/PersonilDetailContext';
-import { LoginPage, MainPage } from './pages';
-import DetailBatalyonPage from './pages/main/batalyon/detail';
+import { DetailSatuanPage, LoginPage, MainPage } from './pages';
 import DetailPerosnilPage from './pages/main/personil/detail';
 
 function App() {
@@ -24,11 +23,11 @@ function App() {
             <MainPage />
           </MainContextProvider>
         } />
-        {/* Batalyon */}
-        <Route path='/detail-batalyon' element={
-          <BatalyonDetailContextProvider>
-            <DetailBatalyonPage />
-          </BatalyonDetailContextProvider>
+        {/* Satuan */}
+        <Route path='/detail-satuan' element={
+          <SatuanDetailContextProvider>
+            <DetailSatuanPage />
+          </SatuanDetailContextProvider>
         } />
         {/* Personil */}
         <Route path='/detail-personil' element={

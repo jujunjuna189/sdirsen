@@ -4,7 +4,7 @@ import AvatarCircle from "../avatar/AvatarCircle";
 const Navbar = () => {
     const { logout } = UseAuthContext();
     return (
-        <div className="bg-white shadow-md">
+        <div className="bg-white shadow-md hidden">
             <div className="flex justify-between py-2 px-6">
                 <div>
                     <span className="font-medium text-2xl">Sdirsen*</span>

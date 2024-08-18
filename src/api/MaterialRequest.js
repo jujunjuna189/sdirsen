@@ -2,11 +2,10 @@ import axios from "axios";
 import { API_MATERIAL_GET } from "../config/api";
 import { getLocalUser } from "../service/LocalStorage";
 
-export const getMaterialRequest = async ({ search = '' }) => {
+export const getMaterialRequest = async ({ filter = '' }) => {
     const user = getLocalUser();
-    let append = `?search=${search}`;
     try {
-        const response = await axios.get(`${API_MATERIAL_GET}${append}`, {
+        const response = await axios.get(`${API_MATERIAL_GET}?${filter}`, {
             headers: {
                 Authorization: `bearer ${user.token}`,
             },

@@ -1,12 +1,12 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { getBatalyonDetailRequest } from "../../api/BatalyonRequest";
+import { getSatuanDetailRequest } from "../../api/SatuanRequest";
 
-const BatalyonDetailContext = createContext();
+const SatuanDetailContext = createContext();
 
-export const BatalyonDetailContextProvider = ({ children }) => {
+export const SatuanDetailContextProvider = ({ children }) => {
     const location = useLocation();
-    const [batalyon, setBatalyon] = useState({});
+    const [satuan, setSatuan] = useState({});
     const [tab, setTab] = useState([
         {
             title: 'Sejarah',
@@ -25,9 +25,9 @@ export const BatalyonDetailContextProvider = ({ children }) => {
         }
     ]);
 
-    const getDetailBatalyon = async (id) => {
-        await getBatalyonDetailRequest({ id: id }).then((res) => {
-            setBatalyon(res);
+    const getDetailSatuan = async (id) => {
+        await getSatuanDetailRequest({ id: id }).then((res) => {
+            setSatuan(res);
         });
     }
 
@@ -42,17 +42,17 @@ export const BatalyonDetailContextProvider = ({ children }) => {
     }
 
     useEffect(() => {
-        getDetailBatalyon(location.state?.batalyonId);
+        getDetailSatuan(location.state?.satuan_id);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
-        <BatalyonDetailContext.Provider value={{ tab, setTabSwitch, batalyon, getDetailBatalyon }}>
+        <SatuanDetailContext.Provider value={{ tab, setTabSwitch, satuan, getDetailSatuan }}>
             {children}
-        </BatalyonDetailContext.Provider>
+        </SatuanDetailContext.Provider>
     );
 }
 
-export const UseBatalyonDetailContext = () => {
-    return useContext(BatalyonDetailContext);
+export const UseSatuanDetailContext = () => {
+    return useContext(SatuanDetailContext);
 }
