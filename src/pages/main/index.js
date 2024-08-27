@@ -45,7 +45,7 @@ const MainPage = () => {
                         <Card styles="mb-3 leading-4 cursor-pointer p-3" key={index}>
                             <div className="md:flex md:justify-between">
                                 <div>
-                                    <span className="font-medium">{item.nama}</span>
+                                    <span className="font-medium">{item.jenis}</span>
                                     <div className="mt-2">
                                         <small className="font-medium">Kategori: </small>
                                         <small>{item.kategori}</small>
@@ -233,7 +233,7 @@ const MainPage = () => {
             <div className="py-16 text-center bg-gradient-to-r from-red-200 via-red-50 to-red-200 relative">
                 <div className="absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-r from-red-100 animate-pulse" />
                 <div className="absolute top-0 bottom-0 left-0 right-0 opacity-[0.15] overflow-hidden flex justify-center items-end">
-                    <img src={imgBg} alt="BackgroundApp" className="object-cover w-full" />
+                    <img src={imgBg} alt="BackgroundApp" className="object-cover w-full h-full" />
                 </div>
                 <div className="relative">
                     <span className="text-3xl font-bold">Sdirsen Pencarian Informasi</span>
