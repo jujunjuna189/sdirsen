@@ -10,3 +10,5 @@ export const API_BINSAT_RENLAKGIAT_GET = `${REACT_APP_API_URL}searcher/binsiapsa
 export const API_BINSAT_LAPLAKGIAT_GET = `${REACT_APP_API_URL}searcher/binsiapsat/binsat/laplakgiat`;
 export const API_LAPSAT_INDUK_GET = `${REACT_APP_API_URL}searcher/binsiapsat/lapsat/induk`;
 export const API_LAPSAT_LAMPIRAN_GET = `${REACT_APP_API_URL}searcher/binsiapsat/lapsat/lampiran`;
+// Learning
+export const API_LEARNING_GET = `${REACT_APP_API_URL}admin/learning`;
