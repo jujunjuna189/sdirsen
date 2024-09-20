@@ -4,8 +4,9 @@ import { LoginContextProvider } from './context/auth/LoginContext';
 import { SatuanDetailContextProvider } from './context/satuan/SatuanDetailContent';
 import { MainContextProvider } from './context/main/MainContext';
 import { PersonilDetailContextProvider } from './context/personil/PersonilDetailContext';
-import { DetailSatuanPage, LoginPage, MainPage } from './pages';
+import { DetailSatuanPage, LearningPage, LoginPage, MainPage } from './pages';
 import DetailPerosnilPage from './pages/main/personil/detail';
+import { LearningContextProvider } from './context/learning/LearningContext';
 
 function App() {
   return (
@@ -34,6 +35,12 @@ function App() {
           <PersonilDetailContextProvider>
             <DetailPerosnilPage />
           </PersonilDetailContextProvider>
+        } />
+        {/* Learning */}
+        <Route path='/learning' element={
+          <LearningContextProvider>
+            <LearningPage />
+          </LearningContextProvider>
         } />
       </Routes>
     </AuthContextProvider>

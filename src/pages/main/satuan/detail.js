@@ -30,7 +30,7 @@ const DetailSatuanPage = () => {
     }
 
     const renderSejarah = () => {
-        return <div className="mt-3 text-sm" style={{ display: 'flex' }} dangerouslySetInnerHTML={{ __html: satuan.sejarah }} />;
+        return <div className="mt-3 text-sm" style={{ display: 'flex', whiteSpace: 'pre-wrap' }} dangerouslySetInnerHTML={{ __html: satuan.sejarah }} />;
     }
 
     const renderHymne = () => {

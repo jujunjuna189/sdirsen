@@ -1,6 +1,5 @@
 import { imgBg } from "../../assets";
-import { Button, Card, Content, FilesType, InputSearch } from "../../components";
-import Navbar from "../../components/molecules/nav/Navbar";
+import { BottomNavigation, Button, Card, Content, FilesType, InputSearch } from "../../components";
 import { UseMainContext } from "../../context/main/MainContext";
 import { dateFormatter, ElipsisFormatter } from "../../utils";
 import { FilterKategoriModal } from "./component";
@@ -229,14 +228,18 @@ const MainPage = () => {
 
     return (
         <Content>
-            <Navbar />
-            <div className="py-16 text-center bg-gradient-to-r from-red-200 via-red-50 to-red-200 relative">
+            <div className="text-center bg-gradient-to-r from-red-200 via-red-50 to-red-200 relative">
                 <div className="absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-r from-red-100 animate-pulse" />
                 <div className="absolute top-0 bottom-0 left-0 right-0 opacity-[0.15] overflow-hidden flex justify-center items-end">
                     <img src={imgBg} alt="BackgroundApp" className="object-cover w-full h-full" />
                 </div>
-                <div className="relative">
-                    <span className="text-3xl font-bold">Sdirsen Pencarian Informasi</span>
+                <div className="text-start px-5 py-5 relative hidden md:block">
+                    <span className="text-base font-semibold">Gunner Smart App</span>
+                </div>
+                <div className="relative py-16">
+                    <div className="flex flex-col">
+                        <span className="text-3xl font-bold">Pencarian Informasi</span>
+                    </div>
                     <div>
                         <span className="font-medium">Jelajahi informasi mengenai data personil, belajar di E-Learning dan mencari material</span>
                     </div>
@@ -306,6 +309,7 @@ const MainPage = () => {
                     </div>
                 </div>
             </div>
+            <BottomNavigation />
         </Content>
     );
 }

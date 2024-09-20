@@ -40,7 +40,7 @@ const FilterKategoriModal = (props) => {
             </div>
             <div className={`fixed top-0 bottom-0 left-0 right-0 flex justify-center items-center z-10 ${!isShow && "hidden"}`}>
                 <div className="absolute h-full w-full bg-black opacity-30 z-10" onClick={() => toogleModal()}></div>
-                <div className="p-3 border rounded-lg bg-white w-96 z-10">
+                <div className="p-3 border rounded-lg bg-white w-96 z-10 mx-3">
                     <div className="leading-3">
                         <span className="text-base font-medium">Kategori Filter</span>
                         <br />

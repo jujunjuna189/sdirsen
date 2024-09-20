@@ -1,18 +1,10 @@
-import { UseAuthContext } from "../../../context/auth/AuthContext";
-import AvatarCircle from "../avatar/AvatarCircle";
-
 const Navbar = () => {
-    const { logout } = UseAuthContext();
     return (
-        <div className="bg-white shadow-md hidden">
+        <div>
             <div className="flex justify-between py-2 px-6">
-                <div>
-                    <span className="font-medium text-2xl">Sdirsen*</span>
-                </div>
-                <div className="flex">
-                    <div onClick={() => logout()}>
-                        <AvatarCircle title="AD" />
-                    </div>
+                <div className="leading-3 flex flex-col">
+                    <span className="font-semibold text-xl">Gunner Smart App</span>
+                    <small>Buku Pintar</small>
                 </div>
             </div>
         </div>
